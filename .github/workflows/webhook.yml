@@ -1,0 +1,12 @@
+name: Webhook Triggered Action
+
+on:
+  repository_dispatch:
+    types: [external-webhook-event]
+
+jobs:
+  webhook_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Print Webhook Payload'
+        run: echo "Received payload: ${{ toJson(github.event.client_payload) }}"
