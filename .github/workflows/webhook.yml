@@ -9,4 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Print Webhook Payload'
-        run: echo "Received payload: ${{ toJson(github.event.client_payload) }}"
+        run: |
+          echo "Received payload: ${{ toJson(github.event.client_payload) }}"
