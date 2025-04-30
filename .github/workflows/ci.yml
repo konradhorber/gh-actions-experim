@@ -1,6 +1,10 @@
 name: Node.js CI
 
-on: [push]						# workflow runs on a git push
+on:
+  push:
+    branches: 
+      - main # workflow runs on a git push to main branch
+  
 
 jobs:
   build:						# workflow has one job: build
